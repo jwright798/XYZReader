@@ -16,12 +16,15 @@
         android:orientation="vertical">
 
         <!--suppress AndroidLintContentDescription -->
+        <!---changed with to make image pop more and fixed scaleType -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/photo_placeholder" />
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop"/>
 
+        <!-- changed text color to fix UI Review complaint -->
         <TextView
             android:id="@+id/article_title"
             style="@style/TextAppearance.AppCompat.Subhead"
@@ -31,7 +34,7 @@
             android:paddingTop="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@color/ltgray"
+            android:textColor="@color/black"
             android:ellipsize="end"
             android:maxLines="4" />
 
